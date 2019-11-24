@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+		<!-- BootStrap -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		{% block head %} {% endblock %}
+		
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+		
+		<!-- Ubuntu Font -->
+		<link href="https://fonts.googleapis.com/css?family=Calistoga|Ubuntu&display=swap" rel="stylesheet">
+		</head>
+		
+		<body>
+		{% block body %} {% endblock %}
+		</body>
+	</html>

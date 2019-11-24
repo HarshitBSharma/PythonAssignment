@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+{% block head %}
+<title>Python Assignment</title>
+{% endblock %}
+
+{% block body %}
+<div id="external--container">
+
+	<div class="header_data">
+		<h1>Student Records</h1>	
+	</div>
+
+	<div id="add-new-button-container" style="text-align:center;">
+		<a class="btn btn-primary" id="Add-new-button" href="/new_student">Add new Students</a>
+	</div>
+
+	<div class="row justify-content-center">
+		<div class="col-auto">
+
+
+			<table class="table table-dark">
+				<thead>
+					<tr>
+						<th scope="col">Student ID</th>
+						<th scope="col">Name</th>
+						<th scope="col">Class ID</th>
+						<th scope="col">Created On</th>
+						<th scope="col">Updated On</th>
+						<th scope="col">Actions</th>
+					</tr>
+				</thead>
+				{% for student in students %}
+
+				<tbody>
+
+						<tr>
+							<td>{{ student.ID }}</td>
+							<td>{{ student.name }}</td>
+							<td>{{ student.classID }}</td>
+							<td>{{ student.created_on.date() }} {{ student.created_on.strftime("%X") }}</td>
+							<td>{{ student.updated_on.date() }}  {{ student.created_on.strftime("%X") }}</td>
+							<td><a href=#>Update</a> <br>
+								<a href=#>Delete</a>
+
+						</tr>
+				</tbody>
+				{% endfor %}
+			</table>
+
+		</div>
+	</div>
+
+	<div class="row justify-content-center">
+		<div class="col-auto">
+	
+			<table class="table table-dark">
+				<thead>
+					<tr>
+						<th scope="col">Class ID</th>
+						<th scope="col">Name</th>
+						<th scope="col">Class Leader</th>
+						<th scope="col">Created On</th>
+						<th scope="col">Updated On</th>
+					</tr>
+				</thead>
+				{% for class1 in classes %}
+				<tbody>
+
+						<tr>
+							<td>{{ ClassTable.ID }}</td>
+							<td>{{ ClassTable.Class_name }}</td>
+							<td>{{ ClassTable.Class_Leader }}</td>
+							<td>{{ ClassTable.created_on.date() }} {{ ClassTable.created_on.strftime("%X") }}</td>
+							<td>{{ ClassTable.updated_on.date() }} {{ ClassTable.created_on.strftime("%X") }}</td>
+							<td><a href=#>Update</a>
+								<br>
+								<a href=#>Delete</a>
+							
+						</tr>
+				</tbody>
+				{% endfor %}
+			</table>
+		</div>
+	</div>	
+	
+
+</div>
+{% endblock %}

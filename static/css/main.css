@@ -1,0 +1,22 @@
+.header_data{
+	font-family: 'Ubuntu', sans-serif;
+	text-align: center;
+}
+.col-auto{
+	font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+	background-color: #92a8d1;
+}
+#form-container{
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #66CCFF;
+	margin:auto;
+	text-align:center;
+	width: 550px;
+	border-radius: 10px;
+}
+Main-Container-newStudent{
+    text-align: center;
+}
