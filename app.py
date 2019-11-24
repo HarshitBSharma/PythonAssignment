@@ -68,4 +68,4 @@ def add_new_student():
 
 if __name__ == "__main__":
     pre_populate()
-    app.run(debug=True)
+    app.run()
